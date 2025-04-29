@@ -1,0 +1,79 @@
+.profile-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.profile-header::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.eco-score {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.progress-ring {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.progress-ring__background {
+    stroke: var(--light);
+}
+
+.progress-ring__progress {
+    stroke: var(--primary);
+    transition: stroke-dashoffset 0.5s;
+}
+
+.eco-tip-card {
+    background: rgba(255,255,255,0.1);
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+.eco-tip-card {
+    background: #eaf7f0;
+    border-left: 4px solid #2ecc71;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #2d4730;
+}
+.eco-tip-card h4 {
+    margin-bottom: 1rem;
+    color: #1a3e2b;
+}
+.eco-tip-card ul {
+    padding-left: 1.2rem;
+    list-style-type: "🌿 ";
+}
+#footprintChartContainer {
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: 2rem auto;
+}

@@ -1,0 +1,151 @@
+.high-contrast {
+  --hc-background: #000000;
+  --hc-foreground: #FFFFFF;
+  --hc-accent: #FFA500;
+  --hc-danger: #FF0000;
+  --hc-success: #00FF00;
+  --hc-focus: #FFA500;
+  --hc-border-width: 2px;
+}
+body .high-contrast{
+ background-color: #000000;
+}
+.high-contrast * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.high-contrast body {
+  background-color: var(--hc-background);
+  color: var(--hc-foreground);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Typography */
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6 {
+  color: var(--hc-accent);
+  margin-bottom: 1rem;
+}
+
+.high-contrast p {
+  margin-bottom: 1.5rem;
+}
+
+.high-contrast a {
+  color: var(--hc-accent);
+  text-decoration: underline;
+  text-decoration-thickness: var(--hc-border-width);
+}
+
+.high-contrast a:hover,
+.high-contrast a:focus {
+  color: var(--hc-foreground);
+  text-decoration: none;
+}
+
+/* Buttons */
+.high-contrast button,
+.high-contrast .button {
+  background-color: var(--hc-accent);
+  color: var(--hc-background);
+  border: var(--hc-border-width) solid var(--hc-foreground);
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.high-contrast button:hover,
+.high-contrast button:focus,
+.high-contrast .button:hover,
+.high-contrast .button:focus {
+  background-color: var(--hc-foreground);
+  color: var(--hc-background);
+}
+
+/* Forms */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: var(--hc-background);
+  color: var(--hc-foreground);
+  border: var(--hc-border-width) solid var(--hc-foreground);
+  padding: 0.5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.high-contrast input:focus,
+.high-contrast textarea:focus,
+.high-contrast select:focus {
+  outline: var(--hc-border-width) solid var(--hc-focus);
+  outline-offset: 2px;
+}
+
+.high-contrast label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Utility Classes */
+.high-contrast .hc-border {
+  border: var(--hc-border-width) solid var(--hc-foreground);
+}
+
+.high-contrast .hc-text-accent {
+  color: var(--hc-accent);
+}
+
+.high-contrast .hc-bg-alert {
+  background-color: var(--hc-danger);
+  color: var(--hc-foreground);
+  padding: 1rem;
+}
+
+.high-contrast .hc-bg-success {
+  background-color: var(--hc-success);
+  color: var(--hc-background);
+  padding: 1rem;
+}
+
+/* Focus States */
+.high-contrast *:focus {
+  outline: var(--hc-border-width) solid var(--hc-focus);
+  outline-offset: 2px;
+}
+
+/* Tables */
+.high-contrast table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.high-contrast th,
+.high-contrast td {
+  border: var(--hc-border-width) solid var(--hc-foreground);
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.high-contrast th {
+  background-color: var(--hc-accent);
+  color: var(--hc-background);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .high-contrast * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
